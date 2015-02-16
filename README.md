@@ -1,2 +1,2 @@
-# rtcampAssignment2
-This is a code in bash shell for the rtcamp Assignment for Linux Sysadmin
+# rtcampAssignment
+This is a assignment for rtcamp Linux/Server/Network Admin. Which is right now underdevelopment phase.
