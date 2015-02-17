@@ -143,18 +143,12 @@ else
 	fi
 
 #EXTRACTING THE LATEST TAR FILES
-
 	ee_echo "Let me extract the tar file"
 cd ~ && tar xzvf latest.tar.gz &>> /dev/null && mv wordpress $example_com &>> /dev/null
-
 	if [ $? -eq 0 ]; then
 	ee_info "Your file has been rename and extracted Successfully"
 cp -rf $example_com /var/www/$example_com
 	fi 
-
-
-
-
 #CREATING A NEW MYSQL-DATABASE FOR WORDPRESS,ADDRESS NAME MUST BE EXAMPLE_COM_DB
 	db_name="_db"
 	db_root_passwd="vipullinux"
@@ -174,5 +168,12 @@ EOF
  else
 	ee_fail "Ops!! something goes wrong, CONTACT sir.isac@gmail.com"
 fi
+#CREATING WP-CONFIG.PHP WITH PROPER DB CONFIGURATION.
+cp /var/www/$example_com/wp-config-sample.php /var/www/$example_com/wp-config.php
+sed -i "s/\(.*'DB_NAME',\)\(.*\)/\1'${example_com//./_}');/" /var/www/$example_com/wp-config.php
+sed -i "s/\(.*'DB_USER',\)\(.*\)/\1'${example_com//./_}');/" /var/www/$example_com/wp-config.php
+sed -i "s/\(.*'DB_PASSWORD',\)\(.*\)/\1'password');/" /var/www/$example_com/wp-config.php
+service nginx restart >> $TEMP 2>&1
+service php5-fpm restart >> $TEMP 2>&1
 
 #UNDER DEVELOPMENT
