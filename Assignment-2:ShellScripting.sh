@@ -170,7 +170,7 @@ EOF
 fi
 #CREATING WP-CONFIG.PHP WITH PROPER DB CONFIGURATION.
 cp /var/www/$example_com/wp-config-sample.php /var/www/$example_com/wp-config.php
-sed -i "s/\(.*'DB_NAME',\)\(.*\)/\1'${example_com//./_}');/" /var/www/$example_com/wp-config.php
+sed -i "s/\(.*'DB_NAME',\)\(.*\)/\1'${example_com//./_}$db_name');/" /var/www/$example_com/wp-config.php
 sed -i "s/\(.*'DB_USER',\)\(.*\)/\1'${example_com//./_}');/" /var/www/$example_com/wp-config.php
 sed -i "s/\(.*'DB_PASSWORD',\)\(.*\)/\1'password');/" /var/www/$example_com/wp-config.php
 service nginx restart >> $TEMP 2>&1
