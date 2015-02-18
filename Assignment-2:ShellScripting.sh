@@ -126,7 +126,7 @@ sudo tee /etc/nginx/sites-available/$example_com << EOF
 }
 EOF
 
-sed -i "s/\(.*server_name\)\(.*\)/\1 ${example_com};/" /etc/nginx/sites-available/$example_com
+#sed -i "s/\(.*server_name\)\(.*\)/\1 ${example_com};/" /etc/nginx/sites-available/$example_com
 ln -sF /etc/nginx/sites-available/$example_com /etc/nginx/sites-enabled/$example_com
 service nginx restart >> $TEMP 2>&1
 service php5-fpm restart >> $TEMP 2>&1
