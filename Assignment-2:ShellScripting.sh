@@ -64,8 +64,8 @@ fi
 		ee_fail "I need to install mysql-server, please wait..."
 
 		ee_fail "I need to install mysql-server, please wait..."
-	debconf-set-selections <<< 'mysql-server mysql-server/root_password vipullinux'
-	debconf-set-selections <<< 'mysql-server mysql-server/root_password_again vipullinux'
+	debconf-set-selections <<< 'mysql-server mysql-server/root_password password vipullinux'
+	debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password vipullinux'
 
 	apt-get install -y mysql-server &>> /dev/null
 
