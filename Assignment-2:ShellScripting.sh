@@ -145,6 +145,11 @@ else
 #EXTRACTING THE LATEST TAR FILES
 	ee_echo "Let me extract the tar file"
 cd ~ && tar xzvf latest.tar.gz &>> /dev/null && mv wordpress $example_com &>> /dev/null
+	i=0
+	while [$i -lt 6]; do
+	((i++))
+cd ~ && tar xzvf latest.tar.gz.$i &>> /dev/null && mv wordpress $example_com &>> /dev/null
+	done
 	if [ $? -eq 0 ]; then
 	ee_info "Your file has been rename and extracted Successfully"
 cp -rf $example_com /var/www/$example_com
