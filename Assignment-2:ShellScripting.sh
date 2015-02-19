@@ -146,8 +146,7 @@ else
 	ee_echo "Let me extract the tar file"
 cd ~ && tar xzvf latest.tar.gz &>> /dev/null && mv wordpress $example_com &>> /dev/null
 	i=0
-	while [$i -lt 6]; do
-	((i++))
+	for i in "" {1..7};do
 cd ~ && tar xzvf latest.tar.gz.$i &>> /dev/null && mv wordpress $example_com &>> /dev/null
 	done
 	if [ $? -eq 0 ]; then
