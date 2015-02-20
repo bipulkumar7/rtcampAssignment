@@ -3,8 +3,8 @@ RTcampAssignment
 
 ## Introduction
 
-This is a assignment for rtcamp Linux/Server/Network Admin. Which is right now underdevelopment phase.
-This Script will install Nginx, MySQL-Server and PHP5 on your Ubuntu System and also configure latest Wordpress. 
+**This is a assignment for rtcamp Linux/Server/Network Admin. Which is right now underdevelopment phase.**
+**This Script will install Nginx, MySQL-Server and PHP5 on your Ubuntu System and also configure latest Wordpress.** 
 
 
 ![Logo](http://i59.tinypic.com/29pw3yb.jpg)
@@ -19,6 +19,6 @@ sudo ./RTcamAssign2.sh                                                #To run th
 
 ## Compatibiltiy
 
-***Ubuntu 14.04 (Trusty) Server.***
+**Ubuntu 14.04 (Trusty) Server.**
 
-***Ubuntu 14.04 (Trusty) Desktop.***
+**Ubuntu 14.04 (Trusty) Desktop.**
