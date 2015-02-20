@@ -23,6 +23,7 @@ sudo apt-get autoclean
 sudo apt-get remove --purge mysql-server
 sudo apt-get autoremove
 sudo apt-get autoclean
+```
 
 # Quick Start Installation.
 ```bash
