@@ -193,4 +193,4 @@ EOF
 	fi	
 	service php5-fpm restart >> $TEMP 2>&1
 
-ee_info Kindly open your browser http://localhost/$example_com "
+ee_info "Kindly open your browser http://localhost/$example_com "
