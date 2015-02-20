@@ -129,8 +129,8 @@ server {
                  }
    }
 EOF
-	sed -i "s/\(.*server_name\)\(.*\)/\1 ${example_com};/" /etc/nginx/sites-available/$example_com
 	ln -sF /etc/nginx/sites-available/$example_com /etc/nginx/sites-enabled/$example_com
+	rm -rf /etc/nginx/sites-available/default &>> /dev/null
 	service nginx restart >> $TEMP 2>&1
 	if [ $? -eq 0 ]; then
 		ee_info "Nginx is successfull installed"
