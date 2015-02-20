@@ -153,11 +153,12 @@ EOF
 		i=0
 	for i in "" {1..7};do
 	cd ~ && tar xzvf latest.tar.gz.$i &>> /dev/null && mv wordpress $example_com &>> /dev/null
-	done
 	if [ $? -eq 0 ]; then
 		ee_info "Your file has been rename and extracted Successfully"
 	cp -rf $example_com /var/www/
 	fi 
+	done
+	cp -rf $example_com /var/www/
 #CREATING A NEW MYSQL-DATABASE FOR WORDPRESS,ADDRESS NAME MUST BE EXAMPLE_COM_DB
 	db_name="_db"
 	db_root_passwd="vipullinux"
