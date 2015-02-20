@@ -8,7 +8,7 @@ This is a assignment for rtcamp Linux/Server/Network Admin. Which is right now u
 This Script will install Nginx, MySQL-Server and PHP5 on your Ubuntu System and also configure latest Wordpress. 
 
 
-![Logo](htttps://cloud.githubusercontent.com/assets/2029018/6306373/0822394e-b959-11e4-86d0-ac4fbd6a6ade.png)
+![Logo](http://i59.tinypic.com/29pw3yb.jpg)
 
 
 # Quick Start
