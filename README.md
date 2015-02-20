@@ -22,3 +22,6 @@ sudo ./RTcamAssign2.sh                                                #To run th
 **Ubuntu 14.04 (Trusty) Server.**
 
 **Ubuntu 14.04 (Trusty) Desktop.**
+
+# Contributor
+[Bipul](https://wiki.ubuntu.com/Bipul)
