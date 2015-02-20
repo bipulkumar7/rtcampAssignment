@@ -10,6 +10,20 @@ RTcampAssignment
 ![Logo](http://i59.tinypic.com/29pw3yb.jpg)
 
 
+# Prerequisite.
+
+**If you are running any other webserver apart Nginx. Then Please remove it.**
+```
+sudo apt-get remove --purge <!Nginx||WebServerPackageName>
+sudo apt-get autoremove
+sudo apt-get autoclean
+```
+**Mysql-server must not installed**
+```
+sudo apt-get remove --purge mysql-server
+sudo apt-get autoremove
+sudo apt-get autoclean
+
 # Quick Start Installation.
 ```bash
 git https://github.com/vipullinux/rtcampAssignment.gi		              #To clone the code 
