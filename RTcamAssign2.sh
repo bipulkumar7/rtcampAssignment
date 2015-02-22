@@ -150,7 +150,7 @@ EOF
 		ee_fail "ERROR! Use:>>>sudo nginx -t<<<< in Terminal"
 	fi	
 	service php5-fpm restart >> $TEMP 2>&1
-	ee_fail "CHILL !! EVERY THINGS IS ALL RIGHT, IT WAS JUST A CONFIG FILE,I DON'T KNOW HOW TO PUT THIS IN BLACKHOLE[/DEV/NULL]"
+	ee_fail "CHILL !! EVERY THINGS IS ALL RIGHT, YOU CAN SEE YOUR CONFIG FILE HERE"
 #DOWNLOADING LATEST VERSION FROM WORDPRESS.ORG THEN UNZIP IT LOCALLY IN EXAMPLE COM/ DOCUMENT ROOM.
 		ee_echo " I am going to download wordpress from http://wordpress.org/latest.tar.gip please wait.."
 	 cd ~ && wget http://wordpress.org/latest.tar.gz >> $TEMP 2>&1
