@@ -217,3 +217,4 @@ EOF
 	service php5-fpm restart >> $TEMP 2>&1
 
 ee_info "Kindly open your browser with following link,and do rest of the configuration part  http://$example_com "
+#Done
