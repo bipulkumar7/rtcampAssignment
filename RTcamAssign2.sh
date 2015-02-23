@@ -107,12 +107,17 @@ fi
 	else
 		ee_info " OH!! Nginx is already installed"
 	fi
-#ASKING USER FOR DOMAIN NAME
+#ASKING USER FOR DOMAIN NAME CHECKING THE EXISTENCE OF DOMAIN
+	for (( i=0; i<10; ++i )); do
 	read -p "Enter the domain name (eg.vipullinux.wordpress.com): " example_com
-#CHECKING THE DOMAIN IS ALREADY BEEN PRESENT OR NOT 
 	grep $example_com /etc/hosts &>> /dev/null
 	if [ $? -eq 0 ]; then
 	ee_fail "SORRY This Domain name is already been taken"
+	else
+	break
+	fi
+	done
+	ee_final "Final domain name is $example_com"
 	read -p "Please enter the domain name again: " example_com 
 	fi
 	ee_info "So the final domain name is $example_com "	
