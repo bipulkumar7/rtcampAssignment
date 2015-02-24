@@ -1,15 +1,4 @@
 #!/bin/bash
-#This program is free software: you can redistribute it and/or modify it
-#under the terms of the GNU General Public License as published by the
-#Free Software Foundation, either version 2 of the License, or (at your option)
-#any later version.
-#
-#This program is distributed in the hope that it will be useful, but WITHOUT ANY
-#WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-#See the GNU General Public License for more details.
-#
-#You should have received a copy of the GNU General Public License along with this program.
-#If not, see http://www.gnu.org/licenses/.
 #defining TEMP
 TEMP="`mktemp`"
 #Defining echo function
@@ -65,7 +54,8 @@ fi
 	fi
 #CHEKING TAR PACKAGE IS INSTALLED OR NOT
 		ee_echo "Checking whether you have tar packages is installed or not."
-	if [[ ! -x /usr/bin/tar ]]; then
+	dpkg -s tar &>> /dev/null
+	if [ $? -ne 0 ]; then
 		ee_fail "SORRY! You don't have tar package installed."
 		ee_echo "Let me install the tar packages on your system."
 	apt-get -y install tar &>> /dev/null
@@ -107,8 +97,8 @@ fi
 	else
 		ee_info " OH!! Nginx is already installed"
 	fi
-#ASKING USER FOR DOMAIN NAME CHECKING THE EXISTENCE OF DOMAIN
-	for (( i=0; i<10; ++i )); do
+#ASKING USER FOR DOMAIN NAME
+	for (( ;; )); do
 	read -p "Enter the domain name (eg.vipullinux.wordpress.com): " example_com
 	grep $example_com /etc/hosts &>> /dev/null
 	if [ $? -eq 0 ]; then
@@ -117,14 +107,7 @@ fi
 	break
 	fi
 	done
-	ee_final "Final domain name is $example_com"
-	read -p "Please enter the domain name again: " example_com 
-	fi
-	ee_info "So the final domain name is $example_com "	
-	
-	if [ ! -d "/var/www/$example_com" ]; then
-		mkdir -p /var/www/$example_com
-	fi
+	ee_info "Final domain name is $example_com"
 	echo "127.0.0.1 $example_com" | sudo tee -a /etc/hosts &>> /dev/null 
 #CREATING NGINX CONFIG FILES FOR EXAMPLE.COM
 	sudo tee /etc/nginx/sites-available/$example_com << EOF
@@ -168,7 +151,7 @@ EOF
 		ee_fail "ERROR! Use:>>>sudo nginx -t<<<< in Terminal"
 	fi	
 	service php5-fpm restart >> $TEMP 2>&1
-	ee_fail "CHILL !! EVERY THINGS IS ALL RIGHT, IT WAS JUST A CONFIG FILE,I DON'T KNOW HOW TO PUT THIS IN BLACKHOLE[/DEV/NULL]"
+	ee_fail "CHILL !! The above is your config file."
 #DOWNLOADING LATEST VERSION FROM WORDPRESS.ORG THEN UNZIP IT LOCALLY IN EXAMPLE COM/ DOCUMENT ROOM.
 		ee_echo " I am going to download wordpress from http://wordpress.org/latest.tar.gip please wait.."
 	 cd ~ && wget http://wordpress.org/latest.tar.gz >> $TEMP 2>&1
@@ -188,7 +171,6 @@ EOF
 #CREATING A NEW MYSQL-DATABASE FOR WORDPRESS,ADDRESS NAME MUST BE EXAMPLE_COM_DB
 	db_name="_db"
 	db_root_passwd="$password"
-	echo "$db_root_passwd"
 	mysql -u root -p$db_root_passwd << EOF
 	CREATE DATABASE ${example_com//./_}$db_name;
 	CREATE USER ${example_com//./_}@localhost;
@@ -221,5 +203,4 @@ EOF
 	fi	
 	service php5-fpm restart >> $TEMP 2>&1
 
-ee_info "Kindly open your browser with following link,and do rest of the configuration part  http://$example_com "
-#Done
+ee_info "Kindly open your browser http://$example_com "
