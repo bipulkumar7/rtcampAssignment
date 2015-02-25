@@ -7,7 +7,7 @@ RTcampAssignment
 **This Script will install Nginx, MySQL-Server and PHP5 on your Ubuntu System and also configure latest Wordpress.** 
 
 
-![Logo](http://i57.tinypic.com/11cfx4x.png)
+![Logo](http://i59.tinypic.com/ogevzb.png)
 
 
 # Prerequisite.
