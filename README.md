@@ -27,7 +27,7 @@ sudo apt-get autoclean
 
 # Quick Start Installation.
 ```bash
-git https://github.com/vipullinux/rtcampAssignment.gi		              #To clone the code 
+git https://github.com/vipullinux/rtcampAssignment.git		              #To clone the code 
 chmod +x RTcamAssign2.sh                                              #Set Executable Permission
 sudo ./RTcamAssign2.sh                                                #To run the script
 ```
