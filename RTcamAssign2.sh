@@ -214,7 +214,7 @@ EOF
 #define('LOGGED_IN_SALT',   'O7|C5K-u+jkc~kf^hlf6t:|-;,5HI]d4G 2mK_h|~FZ!uifbcE:UAHExyB)$0a.+');
 #define('NONCE_SALT',       'k:d6U3,|YiE^36Un-8xl99?Uz|M[x#{yI-K?0{-- &2T-J-mfr#;|XxrQFop&^Z+');
 sed -i 's/\(.*'\''AUTH_KEY'\'',\)\(.*\)/\1'\''Ap2g08@ON7e-j]?+E.csw>-{2hkE!()#rb7gD]q|\&;C4@3455AL_=1LQZ92u|IH}'\'');/' /var/www/$example_com/wp-config.php
-sed -i 's/\(.*'\''SECURE_AUTH_KEY'\'',\)\(.*\)/\1'\''OKuteSM`D=6LVHR+cDbG_cBQ}w@-;>!{T*fy?g{.O(^{V}ygFO:Gc$m9.Iwz~I{'\'');/' /var/www/$example_com/wp-config.php
+sed -i 's/\(.*'\''SECURE_AUTH_KEY'\'',\)\(.*\)/\1'\''OKuteSM`D=6LVHR+cDbG_cBQ}w@-;>!{T*fy?g{.O(^{V }ygFO:Gc$m9.Iwz~I{'\'');/' /var/www/$example_com/wp-config.php
 sed -i 's/\(.*'\''LOGGED_IN_KEY'\'',\)\(.*\)/\1'\''eKR=za5g(>GZr(`{-n8j86aM]L>Imhg@hO\/kyv954MVeslHtT+sCq}^|OVQrrq^B'\'');/' /var/www/$example_com/wp-config.php
 sed -i 's/\(.*'\''NONCE_KEY'\'',\)\(.*\)/\1'\''e_Cc;YTW,y3Cplk{4^AFcnQOvtL%+G6CYAK$=yiq;#d?%11SlkYR8CQD$C\/S|8Mq'\'');/' /var/www/$example_com/wp-config.php
 sed -i 's/\(.*'\''AUTH_SALT'\'',\)\(.*\)/\1'\''sDj8\&?Blr|r_x%;wqA069^O8?5+G8@7hZD`{0|RN=kp>H)Us(]wv.6Mu,M)%cF.a'\'');/' /var/www/$example_com/wp-config.php
