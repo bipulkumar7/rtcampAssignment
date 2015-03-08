@@ -119,9 +119,9 @@ fi
 	fi
 	done
 	ee_info "Final domain name is $example_com"
-	echo "127.0.0.1 $example_com" | sudo tee -a /etc/hosts &>> /dev/null 
+	echo "127.0.0.1 $example_com" | tee -a /etc/hosts &>> /dev/null 
 #CREATING NGINX CONFIG FILES FOR EXAMPLE.COM
-	sudo tee /etc/nginx/sites-available/$example_com << EOF
+	tee /etc/nginx/sites-available/$example_com << EOF
 server {
         listen   80;
 
