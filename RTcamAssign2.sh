@@ -36,7 +36,7 @@ clear
 		ee_info "Thank you for giving me a SUDO user privilege"
 	else
 		ee_fail "I need a SUDO privilage !! :( "
-		ee_fail "Use: sudo bash Ipmnw.sh"
+		ee_fail "Use: sudo bash RTcamAssign2.sh"
 	exit 1
 	fi
 
