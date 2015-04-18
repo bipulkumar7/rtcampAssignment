@@ -1,9 +1,9 @@
-RTcampAssignment
+RTcampAssignment / Installing Wordpress on Nginx Server with MySQL server and PHP-5.
 ==================
 
 ## Introduction
 
-**This is a assignment for rtcamp Linux/Server/Network Admin. Which is right now underdevelopment phase.**
+**This is a assignment for rtcamp Linux/Server/Network Admin.**
 **This Script will install Nginx, MySQL-Server and PHP5 on your Ubuntu System and also configure latest Wordpress.** 
 
 
