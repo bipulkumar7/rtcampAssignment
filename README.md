@@ -40,3 +40,4 @@ sudo ./RTcamAssign2.sh                                                #To run th
 
 # Contributor
 [Bipul](https://wiki.ubuntu.com/Bipul)
+[Gaurav Ashtikar](https://github.com/gau1991)
